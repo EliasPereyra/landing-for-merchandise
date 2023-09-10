@@ -1,5 +1,5 @@
 ---
-
+import Navbar from "../components/navbar.astro"
 ---
 
 <html lang="en">
@@ -11,6 +11,78 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Navbar />
+		<section class="hero">
+			<div class="hero__text-content">
+				<h1>Get the brand new product!</h1>
+			<h3>Descripction of the product, not more than 3 lines for better reading</h3>
+			<button class="btn-cta">CTA!</button>
+			</div>
+		</section>
 	</body>
 </html>
+
+<style is:global>
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	html, body {
+		font-family: 'system-ui', sans-serif;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	button {
+		border: none;
+		border-radius: 8px;
+	}
+
+	.hero {
+		background: rgb(73,242,178);
+background: linear-gradient(90deg, rgba(73,242,178,1) 0%, rgba(86,213,162,1) 40%, rgba(58,210,149,1) 78%, rgba(12,181,115,1) 100%);
+		padding: 8em 4em;
+		height: calc(100vh - 20em);
+	}
+
+	.hero__text-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1em;
+	}
+
+	.hero__text-content h1 {
+		text-align: center;
+		font-size: 2.3rem;
+		font-weight: 900;
+	}
+
+	.hero__text-content h3 {
+		text-align: center;
+		width: 35ch;
+		font-weight: 300;
+		font-size: 1.5rem;
+		line-height: 35px;;
+	}
+
+	.btn-cta {
+		font-weight: bold;
+		padding: 1em 2em;
+		background-color: #eee;
+		width: 10em;
+		opacity: 1;
+		transition: opacity .3s ease-in-out;
+	}
+
+	.btn-cta:hover {
+		opacity: .5;
+	}
+</style>
