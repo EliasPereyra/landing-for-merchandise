@@ -1,7 +1,7 @@
 {
   "name": "landing-for-merchandise",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "bunx --bun astro dev",
     "start": "astro dev",
